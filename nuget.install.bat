@@ -1,0 +1,1 @@
+..\work-tool\nuget install packages.config -o packages -ExcludeVersion -NoCache -source "http://cs-nuget.apphb.com/nuget;http://taobao-ops-base/feeds/nuget/;http://nuget.org/api/v2/"
