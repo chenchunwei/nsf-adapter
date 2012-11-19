@@ -30,8 +30,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\packages\Castle.Core\lib\net40-client\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\packages\Castle.Windsor\lib\net40\Castle.Windsor.dll</HintPath>
+    </Reference>
     <Reference Include="CodeSharp.Core">
       <HintPath>..\..\packages\CodeSharp.Core\lib\net40\CodeSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeSharp.Core.Castles">
+      <HintPath>..\..\packages\CodeSharp.Core.Castles\lib\net40\CodeSharp.Core.Castles.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeSharp.Framework">
+      <HintPath>..\..\packages\CodeSharp.Framework\lib\net40\CodeSharp.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeSharp.Framework.Castles">
+      <HintPath>..\..\packages\CodeSharp.Framework.Castles\lib\net40\CodeSharp.Framework.Castles.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdapterExtensions.cs" />
     <Compile Include="RemotingHandle2.cs" />
     <Compile Include="RemotingHandle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

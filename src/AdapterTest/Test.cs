@@ -99,10 +99,15 @@ namespace AdapterTest
         public void CodeSharp_to_Taobao_Adapter()
         {
             var c = new Castle.Windsor.WindsorContainer();
+
+            //replace default IRemoteHandle
             c.Register(Component
                 .For<C_NSF.Interfaces.IRemoteHandle>()
                 .ImplementedBy<ServiceFrameworkAdapter.RemotingHandle>()
                 .IsDefault());
+            //Or 
+            //Use CodeSharp.Framework
+            //CodeSharp.Framework.Configuration.Config().Castle().NSFAdapter();
 
             CodeSharp.ServiceFramework.Configuration
                 .Configure()
@@ -114,6 +119,8 @@ namespace AdapterTest
             var i = 0;
             while (i++ < 5)
                 c.Resolve<Taobao.Facades.IUserService>().GetUserByDisplayName("侯昆");
+
+            System.Threading.Thread.Sleep(5000);
         }
     }
 }
