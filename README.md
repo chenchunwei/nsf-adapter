@@ -13,6 +13,7 @@ https://github.com/ali-ent/nsf-adapter/blob/master/src/AdapterTest/Test.cs
 https://github.com/ali-ent/nsf-adapter/issues/1
 
 ```shell
+nuget.install.bat
 build
 ```
 
